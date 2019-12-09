@@ -31,17 +31,3 @@ def sign():
 
     label_4 = Label(signup, text="AGE",width=20,font=("#fca103", 10),bg="#bff5ba")
     label_4.place(x=70,y=280)
-
-    list1 = ['17','18','19','20','21','22','23','24','25','26'];
-    c=StringVar()
-    droplist=OptionMenu(signup,c, *list1)
-    droplist.config(width=15)
-    c.set('select your age')
-    droplist.place(x=240,y=280)
-    label_4 = Label(signup, text="Accept",width=20,font=("bold", 10),bg="#bff5ba")
-    label_4.place(x=85,y=330)
-    var1 = IntVar()
-    Checkbutton(signup, text="YES", variable=var1,bg="#bff5ba").place(x=235,y=330)
-    txt=Text(signup,width=10,bg='brown',fg='green')
-    Button(signup, text='SIGN-UP',width=20,bg='brown',fg='white',command=sign_Up).place(x=180,y=380)
-    signup.mainloop()
