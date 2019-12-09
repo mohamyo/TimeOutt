@@ -1,3 +1,5 @@
+def exit():
+    first.destroy()
 def sign():
     def sign_Up():
         db.execute("create table if not exists us(email text,pass text)")
@@ -31,3 +33,36 @@ def sign():
 
     label_4 = Label(signup, text="AGE",width=20,font=("#fca103", 10),bg="#bff5ba")
     label_4.place(x=70,y=280)
+
+    list1 = ['17','18','19','20','21','22','23','24','25','26'];
+    c=StringVar()
+    droplist=OptionMenu(signup,c, *list1)
+    droplist.config(width=15)
+    c.set('select your age')
+    droplist.place(x=240,y=280)
+    label_4 = Label(signup, text="Accept",width=20,font=("bold", 10),bg="#bff5ba")
+    label_4.place(x=85,y=330)
+    var1 = IntVar()
+    Checkbutton(signup, text="YES", variable=var1,bg="#bff5ba").place(x=235,y=330)
+    txt=Text(signup,width=10,bg='brown',fg='green')
+    Button(signup, text='SIGN-UP',width=20,bg='brown',fg='white',command=sign_Up).place(x=180,y=380)
+    signup.mainloop()
+
+
+def log():
+    def login():
+        v=1
+        vx=0
+        cusror = db.execute("select*from us")
+        for row in cusror:
+          if(row["email"]!=entry_1.get()  or row["pass"]!=entry_2.get()):
+            v=v+1
+          else:
+              vx=1
+        if(vx==1):
+            db.commit()
+            db.close()
+            first.destroy()
+            gaming()
+            log.destroy()
+        else:label_10 = Label(log, text=" not fount in the system or password is wrong", width=70, font=("bold", 10), bg="#bff5ba").place(x=100, y=100)
