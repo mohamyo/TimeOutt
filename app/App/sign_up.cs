@@ -46,7 +46,7 @@ namespace App
             String username2 = textBox3.Text;
             if (email1 != "" && pass2 != "" && username2 != "")
             {
-                string query = "Select * from [Table] Where username = '" + textBox3.Text.Trim() + "' and pass = '" + textBox2.Text.Trim() + "'";
+                string query = "Select * from [Table] Where email = '" + textBox3.Text.Trim() + "' and pass = '" + textBox2.Text.Trim() + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
                 DataTable dtbl = new DataTable();
                 sda.Fill(dtbl);
