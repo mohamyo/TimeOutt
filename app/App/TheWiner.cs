@@ -30,7 +30,7 @@ namespace App
                 this.Winner2 = Winner2;
                 InitializeComponent();
                 label2.Text = Winner;
-                sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mohamyo\Desktop\DB\usersDB.mdf;Integrated Security=True;Connect Timeout=30");
+                sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Waseem\Desktop\DB\usersDB.mdf;Integrated Security=True;Connect Timeout=30");
                 sqlcon.Open();
                 string query = "Select * from [level] Where username = '" + Winner1 + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);

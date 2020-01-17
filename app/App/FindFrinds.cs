@@ -26,7 +26,8 @@ namespace App
         {
 
         }
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mohamyo\Desktop\DB\usersDB.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Waseem\Desktop\DB\usersDB.mdf;Integrated Security=True;Connect Timeout=30");
+
         private void button1_Click(object sender, EventArgs e)
         {
             string username2 = textBox1.Text;

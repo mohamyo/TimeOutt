@@ -53,7 +53,7 @@ namespace App
             rndPlayer1 = new Random();
             rndCardFile = new Random();
 
-            sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mohamyo\Desktop\DB\usersDB.mdf;Integrated Security=True;Connect Timeout=30");
+            sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Waseem\Desktop\DB\usersDB.mdf;Integrated Security=True;Connect Timeout=30");
             string query = "Select * from [Table] Where username = '" + MyUserName + "'";
             SqlDataAdapter sda1 = new SqlDataAdapter(query, sqlcon);
             DataTable dtbl1 = new DataTable();
@@ -127,8 +127,8 @@ namespace App
         private void button4_Click(object sender, EventArgs e)
         {
             value = 0;
-           
             timer1.Start();
+
             if (tourn == 0) {
                 numpicPlayer1 = rndPlayer1.Next(1, 14);
                 choosCard(numpicPlayer1);
@@ -203,9 +203,26 @@ namespace App
             
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            game n = new game(MyUserName);
+            this.Close();
+            n.Show();
+        }
+
         //////////////game start:
-    
-       
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            button5.Hide();
+            timer1.Start();
+            numpicPlayer1 = rndPlayer1.Next(1, 14);
+            choosCard(numpicPlayer1);
+            //pictureBox2.ImageLocation = string.Format(@"card\{0}.jpeg", numpicPlayer1);
+            tourn = 1;
+            texting.Text = MyUserName + " your tourn ";
+            count++;
+        }
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -239,23 +256,7 @@ namespace App
 
      
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            game n = new game(MyUserName);
-            this.Close();
-            n.Show();
-        }
-
-        private void button5_Click_1(object sender, EventArgs e)
-        {
-            button5.Hide();
-            timer1.Start();
-            numpicPlayer1 = rndPlayer1.Next(1, 14);
-            choosCard(numpicPlayer1);
-            //            pictureBox2.ImageLocation = string.Format(@"card\{0}.jpeg", numpicPlayer1);
-            tourn = 1;
-            texting.Text = MyUserName + " your tourn ";
-        }
+        
     }
 
     /*

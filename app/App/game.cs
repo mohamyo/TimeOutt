@@ -13,7 +13,7 @@ namespace App
 {
     public partial class game : Form
     {
-        private string MyUsername;
+        public string MyUsername;
         private SqlConnection sqlcon ;
 
         public game(string MyUsername)
@@ -22,7 +22,7 @@ namespace App
             this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
             label1.Text = "HI " + MyUsername;
-            sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mohamyo\Desktop\DB\usersDB.mdf;Integrated Security=True;Connect Timeout=30");
+            sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Waseem\Desktop\DB\usersDB.mdf;Integrated Security=True;Connect Timeout=30");
             string query = "Select * from [level] Where username = '"+ MyUsername + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
             DataTable dtbl = new DataTable();

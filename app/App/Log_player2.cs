@@ -26,7 +26,7 @@ namespace App
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mohamyo\Desktop\DB\usersDB.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Waseem\Desktop\DB\usersDB.mdf;Integrated Security=True;Connect Timeout=30");
             string query = "Select * from [Table] Where username = '" + VsPlayer + "' and pass = '" + textBox1.Text.Trim() + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
             DataTable dtbl = new DataTable();

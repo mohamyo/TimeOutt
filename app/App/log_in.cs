@@ -22,7 +22,7 @@ namespace App
         {
             if (u1 != "" && u2 != "")
             {
-                SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mohamyo\Desktop\DB\usersDB.mdf;Integrated Security=True;Connect Timeout=30");
+                SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Waseem\Desktop\DB\usersDB.mdf;Integrated Security=True;Connect Timeout=30");
                 string query = "Select * from [Table] Where username = '" + u1 + "' and pass = '" + u2 + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
                 DataTable dtbl = new DataTable();
@@ -55,7 +55,8 @@ namespace App
         {
             if (textBox1.Text.Trim() != "" && textBox2.Text.Trim() != "")
             {
-                SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mohamyo\Desktop\DB\usersDB.mdf;Integrated Security=True;Connect Timeout=30");
+                SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Waseem\Desktop\DB\usersDB.mdf;Integrated Security=True;Connect Timeout=30");
+
                 string query = "Select * from [Table] Where username = '" + textBox1.Text.Trim() + "' and pass = '" + textBox2.Text.Trim() + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
                 DataTable dtbl = new DataTable();

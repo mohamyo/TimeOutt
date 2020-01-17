@@ -19,7 +19,7 @@ namespace App
             this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
             this.MyUserName = MyUserName;
-            SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mohamyo\Desktop\DB\usersDB.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Waseem\Desktop\DB\usersDB.mdf;Integrated Security=True;Connect Timeout=30");
             string query = "Select * from [Frinds] Where (username1 = '" + MyUserName + "' or username2 = '" + MyUserName +"') and re = '"+1+"'";
             SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
             DataTable dtbl = new DataTable();

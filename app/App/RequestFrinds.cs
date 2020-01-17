@@ -13,7 +13,7 @@ namespace App
 {
     public partial class RequestFrinds : Form
     {
-        String MYUsername;
+       public String MYUsername;
         SqlConnection sqlcon;
         public RequestFrinds(String MYUsername)
         {
@@ -21,7 +21,7 @@ namespace App
 
             this.MYUsername = MYUsername;
             InitializeComponent();
-             sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mohamyo\Desktop\DB\usersDB.mdf;Integrated Security=True;Connect Timeout=30");
+             sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\win10\OneDrive\Desktop\app1\DB\usersDB.mdf;Integrated Security=True;Connect Timeout=30");
             string query1 = "Select * from [Frinds] Where username2 = '" + MYUsername + "' and re = '" + 0 + "'";
             SqlDataAdapter sda = new SqlDataAdapter(query1, sqlcon);
             DataTable dtbl = new DataTable();
