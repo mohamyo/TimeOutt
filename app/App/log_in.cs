@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -57,7 +57,7 @@ namespace App
             {
                 SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Waseem\Desktop\DB\usersDB.mdf;Integrated Security=True;Connect Timeout=30");
 
-                string query = "Select * from [Table] Where username = '" + textBox1.Text.Trim() + "' and pass = '" + textBox2.Text.Trim() + "'";
+                string query = "Select * from [Table] Where email = '" + textBox1.Text.Trim() + "' and pass = '" + textBox2.Text.Trim() + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
                 DataTable dtbl = new DataTable();
                 sda.Fill(dtbl);
