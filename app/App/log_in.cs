@@ -23,7 +23,7 @@ namespace App
             if (u1 != "" && u2 != "")
             {
                 SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Waseem\Desktop\DB\usersDB.mdf;Integrated Security=True;Connect Timeout=30");
-                string query = "Select * from [Table] Where username = '" + u1 + "' and pass = '" + u2 + "'";
+                string query = "Select * from [Table] Where email = '" + u1 + "' and pass = '" + u2 + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
                 DataTable dtbl = new DataTable();
                 sda.Fill(dtbl);
